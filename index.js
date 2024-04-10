@@ -216,7 +216,7 @@ document.getElementById('signup-modal-close')
 
 function addCart(uuid) {
     let product = products.find(p => p.uuid === uuid);
-    if (sessionStorage.getItem('user') === '') {
+    if (sessionStorage.getItem('user') === null) {
         document.getElementById('login-modal-button').click();
         return;
     }
