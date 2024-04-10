@@ -195,7 +195,7 @@ document.getElementById('signup-form')
 
 document.getElementById('cart')
     .addEventListener('click', (e) => {
-        if (sessionStorage.getItem('user') === '') {
+        if (sessionStorage.getItem('user') === null) {
             e.preventDefault();
             goToCart = true;
             document.getElementById('login-modal-button').click();
