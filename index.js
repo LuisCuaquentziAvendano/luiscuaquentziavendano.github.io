@@ -8,7 +8,7 @@ renderPage();
 
 async function renderPage() {
     // await loadDataToServer();
-    // sessionStorage.setItem('user', '');
+    sessionStorage.setItem('user', '');
     await getProductsFromServer();
     renderProductsWindow();
 }
@@ -195,7 +195,7 @@ document.getElementById('signup-form')
 
 document.getElementById('cart')
     .addEventListener('click', (e) => {
-        if (sessionStorage.getItem('user') === null) {
+        if (sessionStorage.getItem('user') === '') {
             e.preventDefault();
             goToCart = true;
             document.getElementById('login-modal-button').click();
@@ -216,7 +216,7 @@ document.getElementById('signup-modal-close')
 
 function addCart(uuid) {
     let product = products.find(p => p.uuid === uuid);
-    if (sessionStorage.getItem('user') === null) {
+    if (sessionStorage.getItem('user') === '') {
         document.getElementById('login-modal-button').click();
         return;
     }
