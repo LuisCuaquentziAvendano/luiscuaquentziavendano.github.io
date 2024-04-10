@@ -8,7 +8,7 @@ renderPage();
 
 async function renderPage() {
     // await loadDataToServer();
-    sessionStorage.setItem('user', '');
+    // sessionStorage.setItem('user', '');
     await getProductsFromServer();
     renderProductsWindow();
 }
