@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Food store</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <a class="navbar-brand" href="./index.html">
+        <img class="navbar-logo" src="https://static.vecteezy.com/system/resources/previews/012/900/002/non_2x/red-apple-cartoon-illustration-free-vector.jpg" alt="Apple" />
+      </a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      ></button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link active d-none d-md-block"
+              href="./index.html"
+              aria-current="page"
+              >Home<span class="visually-hidden">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Filter by</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <p class="filters dropdown-item" href="#" data-filter="name">
+                    Name
+                </p>
+                <p class="filters dropdown-item" href="#" data-filter="description">
+                    Description
+                </p>
+                <p class="filters dropdown-item" href="#" data-filter="category">
+                    Category
+                </p>
+                <p class="filters dropdown-item" href="#" data-filter="price">
+                    Price
+                </p>
+            </div>
+          </li>
+          <form id="search" class="my-2 my-lg-0 no-display">
+            <input
+              id="search-input-1"
+              class="form-control me-sm-2"
+              type="text"
+            />
+            <input
+              id="search-input-2"
+              class="form-control me-sm-2 no-display"
+              type="text"
+            />
+            <button
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="submit"
+            >
+              Search
+            </button>
+            <button
+              id="close-filter"
+              class="btn btn-danger my-2 my-sm-0 mx-2"
+              type="button"
+            >
+                <i class="bi bi-x-lg"></i>
+            </button>
+          </form>
+          <button id="create-product"
+                    class="btn btn-primary">
+                <i class="bi bi-plus-lg"></i>
+                Create product
+          </button>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- products table -->
+    <br>
+    <div class="row justify-content-evenly g-3 row-flex">
+        <table class="products-table">
+            <thead id="table-headers"></thead>
+            <tbody id="products-container"></tbody>
+        </table>
+    </div>
+    <br>
+
+    <!-- pagination -->
+    <nav class="footer" aria-label="Page navigation">
+      <ul id="pagination" class="justify-content-center pagination">
+      </ul>
+    </nav>
+
+    <!-- product creation and edition form -->
+    <div
+      class="modal fade"
+      id="product-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitleId"></h5>
+            <button id="modal-close"
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form id="product-form">
+                <div id="form-fields"></div>
+                <div class="text-center">
+                  <button id="submit-form" type="submit" class="btn btn-primary"></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="pagination.js"></script>
+    <script src="admin.js"></script>
+    <script src="alert.js"></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

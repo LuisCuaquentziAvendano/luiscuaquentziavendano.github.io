@@ -1,0 +1,83 @@
+.carousel-image {
+    height: 16rem;
+    object-fit: cover;
+}
+
+.carousel-li {
+    color: transparent;
+    user-select: none;
+}
+
+.carousel-container {
+    margin-bottom: 2rem;
+}
+
+.navbar-logo {
+    width: 3rem;
+    border-radius: 50%;
+    margin-left: 2rem;
+}
+
+.cart-icon {
+    margin-right: 1rem;
+}
+
+.card-image {
+    height: 60%;
+    object-fit: cover;
+}
+
+.card-container {
+    width: 16rem;
+    height: 30rem;
+    border: black 1px solid;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.row-flex {
+    width: 100%;
+}
+
+.footer {
+    margin-bottom: 2rem;
+}
+
+.object-image {
+    width: 10rem;
+    float: right;
+}
+
+.object-container {
+    overflow: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-margin {
+    margin: 0 4rem;
+}
+
+.no-display {
+    display: none;
+}
+
+.products-table {
+    width: 90%;
+}
+
+table, tr, th, td {
+    border: 1px black solid;
+    text-align: center;
+}
+
+th, td {
+    word-break: break-all;
+    width: 4rem;
+}
+
+.filters {
+    cursor: pointer;
+}
